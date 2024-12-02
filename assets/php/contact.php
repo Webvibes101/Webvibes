@@ -22,7 +22,7 @@ $message = $_POST['message'];
 $recaptchaResponse = $_POST['g-recaptcha-response']; // reCAPTCHA response from the form
 
 // Google reCAPTCHA Secret Key
-$secretKey = '6LfwaoIqAAAAADZf1OX7I4EsDTKoaLQHSG_SoSEk';  // Replace with your reCAPTCHA secret key
+$secretKey = '';  // Replace with your reCAPTCHA secret key
 
 // Verify reCAPTCHA response
 $verifyUrl = "https://www.google.com/recaptcha/api/siteverify?secret=$secretKey&response=$recaptchaResponse";
@@ -58,8 +58,8 @@ if ($conn->query($sql) === TRUE) {
                 $mail->isSMTP();
                 $mail->Host = 'smtp.zohocloud.ca';  // Use the correct Zoho SMTP server
                 $mail->SMTPAuth = true;
-                $mail->Username = 'admin@webvibes.ca';  // Your Zoho email address
-                $mail->Password = 'Waheguru@1988'; // Use app-specific password if needed
+                $mail->Username = '';  // Your Zoho email address
+                $mail->Password = ''; // Use app-specific password if needed
                 $mail->SMTPSecure = 'ssl';  // Use 'ssl' for encryption (as a string)
                 $mail->Port = 465;  // Use port 465 for SSL connection
 
